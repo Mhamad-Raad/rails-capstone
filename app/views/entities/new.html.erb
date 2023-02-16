@@ -1,0 +1,34 @@
+<h1>Add a new transaction</h1>
+<%= link_to "<", '/groups', class: "btn btn-primary" %>
+<%= form_with model: [@group, @entity] do |f| %>
+  <% if @entity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@entity.errors.count, "error") %> prohibited this transaction from being saved:</h2>
+
+      <ul>
+      <% @entity.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :amount %>
+    <%= f.number_field :amount %>
+  </div>
+
+  <div class="field">
+    <%= f.label :group_id, "Category" %>
+    <%= f.collection_select :group_id, current_user.groups, :id, :name, prompt: "Select a category" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Save" %>
+  </div>
+<% end %>

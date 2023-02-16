@@ -1,5 +1,5 @@
 <h1>Add a new category</h1>
-<%= link_to "Back to Home", '/groups', class: "btn btn-primary" %>
+<%= link_to "<", '/groups', class: "btn btn-primary" %>
 
 <%= form_with model: @group, url: groups_path do |form| %>
   <% if @group.errors.any? %>
