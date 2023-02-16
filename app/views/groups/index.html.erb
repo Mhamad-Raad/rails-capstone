@@ -2,8 +2,10 @@
 <ul>
   <% @groups.each do |group| %>
     <li>
-      <span><%= group.icon %></span>
-      <span><%= group.entities.sum(:amount) %></span>
+      <%= link_to group_entities_path(group) do %>
+        <span><%= group.icon %></span>
+        <span><%= group.entities.sum(:amount) %></span>
+      <% end %>
     </li>
   <% end %>
 </ul>
