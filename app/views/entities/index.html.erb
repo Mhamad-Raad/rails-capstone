@@ -2,6 +2,8 @@
   <h1><%= @group.name %></h1>
   <h2>Total: <%= number_to_currency(@total_amount) %></h2>
 
+
+  <%= link_to "<", '/groups', class: "btn btn-primary" %>
   <% @entities.each do |entity| %>
     <div>
       <span><%= entity.name %></span>
