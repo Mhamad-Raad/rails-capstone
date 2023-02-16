@@ -4,5 +4,4 @@ class Entity < ApplicationRecord
   has_many :groups, through: :memberships
 
   validates :name, presence: true
-
 end
