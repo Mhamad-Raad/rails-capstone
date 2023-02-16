@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   root to: 'splash#index'
 
   # Defines the index and show routes for the Groups resource
-  resources :groups, only: [:index]
+  resources :groups, only: [:index, :new, :create]
 
 end
