@@ -13,7 +13,7 @@ class GroupsController < ApplicationController
     @group = current_user.groups.build(group_params)
 
     if @group.save
-      redirect_to root_path, notice: 'Category was successfully created.'
+      redirect_to '/groups', notice: 'Category was successfully created.'
     else
       render :new
     end
