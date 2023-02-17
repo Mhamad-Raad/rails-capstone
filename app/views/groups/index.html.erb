@@ -86,10 +86,35 @@
                 display: block;
             }
         }
+
+        ul {
+            list-style: none;
+            padding: 50px;
+        }
+
+        .group-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.group-card span:first-of-type {
+  font-size: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.group-card span:last-of-type {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
     </style>
 
     <header>
-        <div class="logo">Example Logo</div>
+        <div class="logo">Transaction</div>
         <nav>
             <ul>
                 <li><a href="#">Link 1</a></li>
@@ -117,11 +142,12 @@
 
 <ul>
   <% @groups.each do |group| %>
-    <li>
-      <%= link_to group_entities_path(group) do %>
+    <%= link_to group_entities_path(group) do %>
+    <li class="group-card">
         <span><%= group.icon %></span>
+        <span><%= group.name %></span>
         <span><%= group.entities.sum(:amount) %></span>
-      <% end %>
-    </li>
+        </li>
+        <% end %>
   <% end %>
 </ul>
