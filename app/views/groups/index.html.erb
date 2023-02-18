@@ -3,28 +3,7 @@
 
     <header>
         <div class="logo">Transaction</div>
-        <nav>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-            <div class="mobile-nav">
-                <i class="menu-icon fas fa-bars"></i>
-            </div>
-        </nav>
     </header>
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navUl = document.querySelector('nav ul');
-        
-        menuIcon.addEventListener('click', () => {
-            menuIcon.classList.toggle('active');
-            navUl.classList.toggle('active');
-        });
-    </script>
 
 <h1>Groups</h1>
 
@@ -41,3 +20,7 @@
     <% end %>
 <% end %>
 </ul>
+
+  <div class="center">
+    <%= link_to "Add a new Group", new_group_path(@group), class: "add" %>
+  </div>
