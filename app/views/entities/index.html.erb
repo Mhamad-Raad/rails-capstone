@@ -1,16 +1,28 @@
-<div>
-  <h1><%= @group.name %></h1>
-  <h2>Total: <%= number_to_currency(@total_amount) %></h2>
-
-
+<%= stylesheet_link_tag 'entityIndex' %>
+<header>
   <%= link_to "<", '/groups', class: "btn btn-primary" %>
-  <% @entities.each do |entity| %>
-    <div>
-      <span><%= entity.name %></span>
-      <span><%= number_to_currency(entity.amount) %></span>
-      <span><%= entity.created_at.strftime("%B %d, %Y") %></span>
-    </div>
-  <% end %>
+  <h1><%= @group.name %></h1>
+</header>
+<div>
+<div class="total">
+  <h2>Total</h2>
+  <h2><%= number_to_currency(@total_amount) %></h2>
+</div>
 
-  <%= link_to "Add a new entity", new_group_entity_path(@group), class: "btn" %>
+<div class="card">
+  <div class="card-body">
+    <% @entities.each do |entity| %>
+      <div class="entity">
+        <span><%= entity.name %></span>
+        <span><%= number_to_currency(entity.amount) %></span>
+        <span><%= entity.created_at.strftime("%B %d, %Y") %></span>
+      </div>
+    <% end %>
+  </div>
+
+</div>
+
+  <div class="center">
+    <%= link_to "Add a new entity", new_group_entity_path(@group), class: "add" %>
+  </div>
 </div>
