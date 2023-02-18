@@ -11,7 +11,7 @@
 <% @groups.each do |group| %>
 <%= link_to group_entities_path(group) do %>
 <li class="group-card">
-    <div>
+    <div class="left">
         <img src=<%= group.icon %> />
         <span><%= group.name %></span>
     </div>
