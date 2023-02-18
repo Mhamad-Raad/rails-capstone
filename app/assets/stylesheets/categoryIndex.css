@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+img {
+  max-width: 100px;
+  max-height: 100px;
+}
+
 .group-card span:first-of-type {
   font-size: 24px;
   margin-left: 10px;
