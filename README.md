@@ -136,10 +136,12 @@ To run all tests, including unit and integration tests, run the following comman
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<div name="live-demo">
-## Live Project
-[Live Demo](https://rails-project-4a3q.onrender.com/)
+# Live Project
 
+<div name="live-demo">
+
+- [Live Demo](https://rails-project-4a3q.onrender.com/)
+</div>
 
 
 
