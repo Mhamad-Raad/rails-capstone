@@ -7,11 +7,10 @@ ruby '3.1.3'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails'
 gem 'factory_bot_rails'
 gem 'faker'
 gem 'rails-controller-testing'
-
+gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
