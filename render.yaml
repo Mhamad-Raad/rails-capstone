@@ -15,8 +15,4 @@ services:
         fromDatabase:
           name: posgres
           property: connectionString
-  - type: redis
-    name: redis
-    ipAllowList: []
-    plan: free
-    maxmemoryPolicy: noeviction
+
