@@ -1,0 +1,25 @@
+.group-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.group-card span:first-of-type {
+  font-size: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+.group-card span:last-of-type {
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+}
+
+ul {
+  padding: 10px;
+}
