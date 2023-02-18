@@ -31,12 +31,23 @@ body {
 
 /* Header styles */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #3778c2;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+}
+
+h1,
+h2,
+h3,
+p,
+div,
+span,
+a,
+label,
+li {
+  color: #434b54;
 }
 
 .logo {
