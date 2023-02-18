@@ -2,10 +2,14 @@
 
 
     <header>
+    <p>
+        x
+    </p>
         <div class="logo">Transaction</div>
+    <p>
+        x
+    </p>
     </header>
-
-<h1>Groups</h1>
 
 <ul>
 <% @groups.each do |group| %>
@@ -21,6 +25,6 @@
 <% end %>
 </ul>
 
-  <div class="center">
+  <div class="center down">
     <%= link_to "Add a new Group", new_group_path(@group), class: "add" %>
   </div>
