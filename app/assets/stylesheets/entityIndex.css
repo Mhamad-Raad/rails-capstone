@@ -1,0 +1,141 @@
+header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+div {
+  margin: 0;
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 24px;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+span {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+@media (max-width: 600px) {
+  div {
+    padding: 5px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  span {
+    margin-right: 5px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card-item {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.card-item:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.card-item span {
+  margin-bottom: 10px;
+}
+
+.card-item span:first-child {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.card-item span:nth-child(2) {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.card-item span:last-child {
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+
+.btn {
+  background-color: #007bff;
+  color: #434b54;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.entity {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.add {
+  background-color: #5fb423;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+}

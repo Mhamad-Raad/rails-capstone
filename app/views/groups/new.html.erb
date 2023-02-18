@@ -1,7 +1,7 @@
-<div class="back">
+<header class="back">
   <%= link_to "<", '/groups'%>
-  <h1>Add a new category</h1>
-</div>
+  <h1>Add Category</h1>
+</header>
 
 <%= form_with model: @group, url: groups_path do |form| %>
   <% if @group.errors.any? %>

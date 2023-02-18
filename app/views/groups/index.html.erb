@@ -1,153 +1,26 @@
-    <style>
-        /* Global styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: sans-serif;
-        }
-        
-        /* Header styles */
-        header {
-            background-color: #333;
-            color: #fff;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem;
-        }
-        
-        .logo {
-            font-size: 2rem;
-        }
-        
-        /* Navigation styles */
-        nav {
-            display: flex;
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-        
-        nav li {
-            margin: 0 1rem;
-        }
-        
-        nav a {
-            color: #fff;
-            text-decoration: none;
-        }
-        
-        /* Mobile navigation styles */
-        .mobile-nav {
-            display: none;
-        }
-        
-        .menu-icon {
-            font-size: 2rem;
-            cursor: pointer;
-        }
-        
-        .menu-icon:hover {
-            color: #ddd;
-        }
-        
-        .menu-icon.active {
-            color: #fff;
-        }
-        
-        @media screen and (max-width: 768px) {
-            .menu-icon {
-                display: block;
-            }
-            
-            nav ul {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                padding: 1rem 0;
-                text-align: center;
-            }
-            
-            nav li {
-                margin: 1rem 0;
-            }
-            
-            .mobile-nav {
-                display: block;
-            }
-        }
+<%= stylesheet_link_tag 'categoryIndex' %>
 
-        ul {
-            list-style: none;
-            padding: 50px;
-        }
-
-        .group-card {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.group-card span:first-of-type {
-  font-size: 24px;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-.group-card span:last-of-type {
-  font-size: 20px;
-  font-weight: bold;
-  vertical-align: middle;
-}
-
-    </style>
 
     <header>
         <div class="logo">Transaction</div>
-        <nav>
-            <ul>
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-            </ul>
-            <div class="mobile-nav">
-                <i class="menu-icon fas fa-bars"></i>
-            </div>
-        </nav>
     </header>
-    
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navUl = document.querySelector('nav ul');
-        
-        menuIcon.addEventListener('click', () => {
-            menuIcon.classList.toggle('active');
-            navUl.classList.toggle('active');
-        });
-    </script>
 
 <h1>Groups</h1>
 
 <ul>
-  <% @groups.each do |group| %>
-    <%= link_to group_entities_path(group) do %>
-    <li class="group-card">
-        <span><%= group.icon %></span>
+<% @groups.each do |group| %>
+<%= link_to group_entities_path(group) do %>
+<li class="group-card">
+    <div class="left">
+        <img src=<%= group.icon %> />
         <span><%= group.name %></span>
-        <span><%= group.entities.sum(:amount) %></span>
-        </li>
-        <% end %>
-  <% end %>
+    </div>
+    <span><%= group.entities.sum(:amount) %> $</span>
+</li>
+    <% end %>
+<% end %>
 </ul>
+
+  <div class="center">
+    <%= link_to "Add a new Group", new_group_path(@group), class: "add" %>
+  </div>

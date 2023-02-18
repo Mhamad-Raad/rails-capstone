@@ -51,5 +51,6 @@ input[type="submit"] {
 
   input[type="submit"] {
     font-size: 14px;
+    background-color: #5fb523;
   }
 }

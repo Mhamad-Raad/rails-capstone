@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag 'login' %>
-
-<h2>Log in</h2>
-
+<header>
+  <h2>Log in</h2>
+</header>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
@@ -14,7 +14,7 @@
   </div>
 
   <% if devise_mapping.rememberable? %>
-    <div class="field">
+    <div class="field near">
       <%= f.check_box :remember_me %>
       <%= f.label :remember_me %>
     </div>
@@ -23,6 +23,8 @@
   <div class="actions">
     <%= f.submit "Login" %>
   </div>
+  <br>
+  <br>
+  <br>
+  <%= render "devise/shared/links" %>
 <% end %>
-
-<%= render "devise/shared/links" %>

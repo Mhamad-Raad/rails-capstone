@@ -1,5 +1,9 @@
-<h1>Add a new transaction</h1>
-<%= link_to "<", '/groups', class: "btn btn-primary" %>
+<%= stylesheet_link_tag 'newEntity' %>
+
+<header>
+  <%= link_to "<", '/groups', class: "btn btn-primary" %>
+  <h1>Add transaction</h1>
+</header>
 <%= form_with model: [@group, @entity] do |f| %>
   <% if @entity.errors.any? %>
     <div id="error_explanation">
