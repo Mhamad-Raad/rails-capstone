@@ -1,0 +1,30 @@
+<%= stylesheet_link_tag 'categoryIndex' %>
+
+
+    <header>
+    <p>
+        x
+    </p>
+        <div class="logo">Transaction</div>
+    <p>
+        x
+    </p>
+    </header>
+
+<ul>
+<% @groups.each do |group| %>
+<%= link_to group_entities_path(group) do %>
+<li class="group-card">
+    <div class="left">
+        <img src=<%= group.icon %> />
+        <span><%= group.name %></span>
+    </div>
+    <span><%= group.entities.sum(:amount) %> $</span>
+</li>
+    <% end %>
+<% end %>
+</ul>
+
+  <div class="center down">
+    <%= link_to "Add a new Group", new_group_path(@group), class: "add" %>
+  </div>

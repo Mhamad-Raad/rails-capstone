@@ -1,0 +1,54 @@
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.header-loginnnn {
+  color: white;
+}
+
+.new_user {
+  padding: 0;
+  background: white;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.next {
+  margin: 0 !important;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.signup-header {
+  margin-bottom: 25px;
+}
+
+.header-title {
+  margin: 0 !important;
+  color: white;
+}
+
+.s_n,
+.s_p,
+.s_rp,
+.s_e {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+
+@media (max-width: 600px) {
+  input[type="email"],
+  input[type="password"],
+  input[type="text"] {
+    font-size: 14px;
+  }
+}

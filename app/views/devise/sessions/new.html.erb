@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag 'login' %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+  <header class="header-login">
+    <a href="/" class="splash-back">
+      < Login
+    </a>
+  
+    <h1 class="login-header">Log in</h1>
+  
+    <%= f.submit "Login", class: "Log" %>
+    
+  </header>
+
+
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password" %>
+  </div>
+  <% end %>
+  <div class="f-bg">
+  <a href="/users/password/new" class="forgot">
+    Forgot Password
+  </a>
+  </div>

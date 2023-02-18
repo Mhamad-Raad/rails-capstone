@@ -1,0 +1,45 @@
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.field {
+  width: 100%;
+}
+
+#entity_amount {
+  width: 100%;
+  height: 20px;
+}
+
+#entity_group_id {
+  width: 50%;
+  height: 20px;
+}
+
+h1 {
+  padding: 0;
+}
+
+#group_name,
+#group_icon {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.saveC {
+  height: 40px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}

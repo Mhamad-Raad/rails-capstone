@@ -1,7 +1,10 @@
-<h1>Welcome to my Rails App</h1>
+<h1 class="loading-logo">Budget App</h1>
 
-<script>
-  setTimeout(function() {
-    window.location.href = "/some_path";
-  }, 3000);
-</script>
+<div class="center">
+  <%= link_to "LOGIN", new_user_session_path, class: "login" %>
+</div>
+
+
+<div class="center">
+  <%= link_to "SIGN UP", new_user_registration_path, class: "signup" %>
+</div>

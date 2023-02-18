@@ -7,6 +7,9 @@ ruby '3.1.3'
 gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'rails-controller-testing'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
@@ -28,6 +31,8 @@ gem 'stimulus-rails'
 gem 'jbuilder'
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
@@ -56,6 +61,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'rspec-rails'
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
 

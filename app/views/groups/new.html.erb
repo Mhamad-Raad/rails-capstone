@@ -1,0 +1,26 @@
+<header class="back">
+  <%= link_to "<", '/groups'%>
+  <h1>Add Category</h1>
+</header>
+
+<%= form_with model: @group, url: groups_path do |form| %>
+  <% if @group.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@group.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% @group.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= form.label :name %>
+    <%= form.text_field :name, required: true %>
+
+    <%= form.label :icon %>
+    <%= form.text_field :icon, required: true %>
+
+  <%= form.submit 'Save', class: "saveC" %>
+<% end %>
