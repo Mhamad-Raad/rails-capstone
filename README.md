@@ -25,7 +25,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Recipe Application <a name="about-project"></a>
+# 📖 Budget Application <a name="about-project"></a>
 
 **[Budget Application]** This project, created using Ruby on Rails, provides a platform for users to use and track their budgets.
 
