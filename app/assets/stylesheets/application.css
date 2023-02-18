@@ -151,10 +151,6 @@ form {
   padding: 10px;
 }
 
-input[type=submit] {
-  margin-top: 10px;
-}
-
 .center {
   display: flex;
   justify-content: center;
