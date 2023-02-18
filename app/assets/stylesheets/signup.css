@@ -1,56 +1,54 @@
-.signup-container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.field {
-  margin-bottom: 20px;
-}
-
 label {
   display: block;
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
-input[type="email"],
-input[type="password"],
-input[type="text"] {
+.header-login {
+  color: white;
+}
+
+.new_user {
+  padding: 0;
+  background: white;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.next {
+  margin: 0 !important;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.signup-header {
+  margin-bottom: 25px;
+}
+
+.header-title {
+  margin: 0 !important;
+  color: white;
+}
+
+.s_n,
+.s_p,
+.s_rp,
+.s_e {
   width: 100%;
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
-
-.actions {
-  text-align: center;
-  margin-top: 20px;
-}
-
-input[type="submit"] {
-  background-color: #0d6efd;
-  color: #fff;
-  padding: 10px 20px;
-  font-size: 16px;
+  height: 50px;
   border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  border-bottom: 1px solid grey;
 }
 
 @media (max-width: 600px) {
-  .signup-container {
-    padding: 10px;
-  }
-
   input[type="email"],
   input[type="password"],
   input[type="text"] {
     font-size: 14px;
-  }
-
-  input[type="submit"] {
-    font-size: 14px;
-    background-color: #5fb523;
   }
 }

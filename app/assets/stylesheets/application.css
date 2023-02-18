@@ -27,6 +27,7 @@ a {
 
 body {
   font-family: "Proxima Nova", Fredoka One, cursive, sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* Header styles */
@@ -36,6 +37,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
+  color: white !important;
 }
 
 h1,
